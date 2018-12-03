@@ -6,15 +6,15 @@
 - a 0 vég az olvasó vég, 1 es vég az író vég
 - ezt `write`tal és `read`del lehet kezelni, meg kell adni a memóriacíemet, a read pedig olvasni fog a 0tól, meg kell adni egy címet és oda kell bemásolni annyi adatot amennyit a csővezetékben talál
 - a nem használt végeket zárjuk le!
--- az olvasó fél zárja le az író véget
+- - az olvasó fél zárja le az író véget
 - egyetlen csővezetéken is lehet oda vissza kommunikációt folytatni, de ha a szülő beléépp és írja és közvetlenül utánna olvasunk akkor akkor ha a szülő az aki végrehajtja az utasítást akkor a sjátmaga által írt adatot fogja beolvasni
--- zh-n ajánlott két csővezeéket használni: egyiken írunk, másikon olvasunk
--- ha nagyon sok folyamat közt kell oda vissza kommunikációt akkor nem éri meg duplázni a csővezetékékeket
--- írunk egy üzenetet, és várunk a másik fél jelzésére, hogy elküldte-e már a választ
+- - zh-n ajánlott két csővezeéket használni: egyiken írunk, másikon olvasunk
+- - ha nagyon sok folyamat közt kell oda vissza kommunikációt akkor nem éri meg duplázni a csővezetékékeket
+- - írunk egy üzenetet, és várunk a másik fél jelzésére, hogy elküldte-e már a választ
 
 #### Mi van ha nem egy adatot küldünk hanem többet?
-- a read hatására addig vár amíłg meg nem érkezik hozzá a folyamat
--- észreveszi a `read`, azt, hogy nem érkezhet több adat akkor ha mindenegyes `író vég` le van zárva az alkalmazásban
+- a read hatására addig vár amíg meg nem érkezik hozzá a folyamat
+- - észreveszi a `read`, azt, hogy nem érkezhet több adat akkor ha mindenegyes `író vég` le van zárva az alkalmazásban
 => egy `while(read)` működni fog
 
 # A nemhaasznált végeket azonnal zárjuk le, akkor is ha nem csinál semmit!!!
