@@ -1,7 +1,7 @@
 # GY8
 > mappa: `gy3`
 
-### Négtelen cső:
+### Névtelen cső:
 - olyan mint egy sor
 - a 0 vég az olvasó vég, 1 es vég az író vég
 - ezt `write`tal és `read`del lehet kezelni, meg kell adni a memóriacíemet, a read pedig olvasni fog a 0tól, meg kell adni egy címet és oda kell bemásolni annyi adatot amennyit a csővezetékben talál
